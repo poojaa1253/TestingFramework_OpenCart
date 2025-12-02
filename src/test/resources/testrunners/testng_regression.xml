@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart App Test Regression Suite" verbose="2" thread-count="2" parallel="tests">
+
+	<listeners>
+<!--		<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"></listener>-->
+		<listener class-name="com.qa.opencart.listener.TestAllureListener"></listener>
+		<listener class-name="com.qa.opencart.listener.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Login Page Test_chrome">	
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="Account Page Test_chrome">
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.opencart.tests.AccountsPageTest" />
+		</classes>
+	</test>
+	
+	<test name="Search Page Test_chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.opencart.tests.SearchTest" />
+		</classes>
+	</test>
+	
+<!--	<test name="Product Info Page Test">-->
+<!--		<parameter name="browser" value="chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.qa.opencart.tests.ProductInfoPageTest" />-->
+<!--		</classes>-->
+<!--	</test>-->
+	
+<!--	<test name="Register Info Page Test">-->
+<!--		<parameter name="browser" value="chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.qa.opencart.tests.RegisterPageTest" />-->
+<!--		</classes>-->
+<!--	</test>-->
+
+
+
+
+</suite>	
