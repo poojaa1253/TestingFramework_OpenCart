@@ -9,6 +9,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -19,11 +20,11 @@ import com.qa.opencart.pages.LoginPage;
 import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegisterPage;
 import com.qa.opencart.pages.SearchResultsPage;
-import com.qa.opencart.utils.LogUtil;
+
 
 import io.qameta.allure.Description;
 
-//@Listeners(ChainTestListener.class)
+@Listeners(ChainTestListener.class)
 public class BaseTest {
 	
 	WebDriver driver;
