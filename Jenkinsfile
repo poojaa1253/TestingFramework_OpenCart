@@ -25,6 +25,7 @@ pipeline
                         if (fileExists('target/*.jar')) {
                             archiveArtifacts 'target/*.jar'
                         }
+                     }   
             }
         }
         
