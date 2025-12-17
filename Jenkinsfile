@@ -18,14 +18,10 @@ pipeline
             post 
             {
                 success
-                script {
-                        if (fileExists('**/target/surefire-reports/TEST-*.xml')) {
-                            junit '**/target/surefire-reports/TEST-*.xml'
-                        }
-                        if (fileExists('target/*.jar')) {
-                            archiveArtifacts 'target/*.jar'
-                        }
-                     }   
+                {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
             }
         }
         
